@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FuTApp26 - El mejor juego de fútbol, crea tu equipo, dirige como DT y compite con amigos."
+    />
+    <meta name="author" content="Joaquin Pereira" />
+    <meta
+      name="keywords"
+      content="Fútbol, Juego de Fútbol, Manager, DT, Compite con amigos, FUTAPP"
+    />
+    <link rel="stylesheet" href="./style/estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/logo1.ico" />
+    <title>FUTAPP</title>
+  </head>
+  <body>
+    <header>
+      <img src="./img/logo2.png" alt="logo" />
+
+      <nav>
+        <a href="#sectionHero">Inicio</a>
+        <a href="#sectionNovedades">Novedades</a>
+        <a href="#sectionDtEquipo">Modo DT</a>
+        <a href="#sectionComentarios">Comentarios</a>
+      </nav>
+      <div id="btnHeader">
+        <input type="button" id="btnIniciarSesion" value="Iniciar sesion" />
+        <input type="button" id="btnRegistrarse" value="Registrarse" />
+      </div>
+    </header>
+
+    <main>
+      <!-- aca empieza el hero -->
+      <section id="sectionHero">
+        <div id="contenedorHero">
+          <article>
+            <h1>FuTApp26</h1>
+            <h2>Lanzamiento de nuestro nuevo juego!</h2>
+            <p>Dejanos tus datos para avisarte cuando puedas descargarlo</p>
+          </article>
+          <form >
+            <h3>Registro</h3>
+            <label for="txtEmail">Ingrese su email:</label>
+            <input
+              type="email"
+              id="txtEmail"
+              placeholder="example@gmail.com"
+              required
+            />
+            <label for="slcPais">Seleccione su país:</label>
+            <select id="slcPais" required>
+              <option value="uy">Uruguay</option>
+              <option value="arg">Argentina</option>
+              <option value="br">Brasil</option>
+              <option value="chi">Chile</option>
+            </select>
+            <label for="checkNotificaciones">
+              <input type="checkbox" id="checkNotificaciones" />
+              Acepto recibir notificaciones de FuTApp
+            </label>
+            <button type="submit">Registrarse</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- aca termina el hero -->
+      <!-- aca empieza la seccion de novedades-->
+      <section id="sectionNovedades">
+        <h2>Novedades</h2>
+        <div id="grid">
+          <div class="gridItem ligas">
+            <article id="txtLigas">
+              <h3>Muchísimas ligas disponibles!</h3>
+              <p>
+                En FuTApp26 vas a encontrar equipos de todas las ligas del mundo
+              </p>
+            </article>
+            <img src="./img/ligas.png" alt="ligas" />
+          </div>
+
+          <div class="gridItem cooperativo">
+            <img src="./img/creaTuPropioEquipo.jpg" alt="Equipo de amigos" />
+            <article id="textoCooperativo">
+              <h3>Jugá con tus amigos</h3>
+              <p>
+                Encontrarás modos para jugar cooperativamente con tus amigos en
+                los mejores estadios del mundo
+              </p>
+            </article>
+            <img src="./img/estadios.jpg" alt="Estadio" />
+          </div>
+
+          <div class="gridItem leyenda">
+            <article id="textoLeyenda">
+              <h3>Conviértete en una leyenda del fútbol</h3>
+              <p>
+                Crea tu propio jugador, o selecciona a tu jugador favorito y
+                vive toda su carrera desde 0
+              </p>
+            </article>
+            <img src="./img/jugador.jpg" alt="Jugador entrenando" />
+          </div>
+        </div>
+      </section>
+      <!-- Aca termina la seccion de novedades -->
+
+      <!-- seccion dt equipo -->
+      <section id="sectionDtEquipo">
+        <div id="izqDt">
+          <article id="txtDt">
+            <h2>Conviértete en el mejor DT</h2>
+            <h3>Dirige a tu equipo hacia la victoria!</h3>
+            <p>
+              Con FUTAPP podés tomar el control total de tu equipo: elegí la
+              formación, gestioná el vestuario y tomá decisiones tácticas claves
+              para llevar a tu club a lo más alto del campeonato. Demostrá que
+              tenés lo que se necesita para ser un verdadero director técnico.
+            </p>
+            <a href="#sectionHero">Regístrate</a>
+          </article>
+          <img src="./img/tecnico.jpg" alt="imagen dt" />
+        </div>
+        <div id="derDt">
+          <div id="listaJugadores">
+            <article>
+              <h3>Controlá tu plantilla de jugadores</h3>
+            </article>
+            <table class="tabla-celdas">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Posición</th>
+                  <th>Estado Físico</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lucas Rodríguez</td>
+                  <td>Delantero</td>
+                  <td>100% <i class="fa-solid fa-battery-full"></i></td>
+                </tr>
+                <tr>
+                  <td>Matías Gómez</td>
+                  <td>Mediocampista</td>
+                  <td>55% <i class="fa-solid fa-battery-half"></i></td>
+                </tr>
+                <tr>
+                  <td>Agustín Pérez</td>
+                  <td>Arquero</td>
+                  <td>95% <i class="fa-solid fa-battery-full"></i></td>
+                </tr>
+                <tr>
+                  <td>Franco Suárez</td>
+                  <td>Defensor</td>
+                  <td>10% <i class="fa-solid fa-suitcase-medical"></i></td>
+                </tr>
+                <tr>
+                  <td>Antonio Rudiger</td>
+                  <td>Defensor</td>
+                  <td>95% <i class="fa-solid fa-battery-full"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="descripcionDt">
+            <h2>Tu Rol como DT</h2>
+            <p>
+              <i class="fas fa-futbol icono"></i> Conocé a fondo a tus jugadores
+            </p>
+            <p>
+              <i class="fas fa-chess-board icono"></i> Armá estrategias únicas
+            </p>
+            <p>
+              <i class="fas fa-notes-medical icono"></i> Gestioná lesiones y
+              descansos
+            </p>
+            <p><i class="fas fa-bullseye icono"></i> Motivá al equipo</p>
+            <p><i class="fas fa-trophy icono"></i> Ganá campeonatos</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comentarios -->
+
+      <section id="sectionComentarios">
+        <h2>Jugadores profesionales</h2>
+        <p>
+          Les dimos a probar este juego a algunos jugadores profesionales, a
+          continuacion les dejamos algunos de sus comentarios
+        </p>
+        <div id="contenedorCards">
+          <article class="card">
+            <img src="./img/leoFernandez.jpeg" alt="Leonardo Fernandez" />
+            <p>
+              <q
+                >Este juego me sorprendió. Tiene mecánicas sólidas, es adictivo
+                y se nota el amor por el fútbol.</q
+              >
+              <cite>Leonardo Fernández</cite>
+            </p>
+          </article>
+          <article class="card">
+            <img src="./img/cristiano.jpeg" alt="Cristiano Ronaldo" />
+            <p>
+              <q
+                >El modo DT es una locura. Tener que tomar decisiones tácticas
+                en tiempo real te mete de lleno en el partido. SIUUUU</q
+              >
+              <cite>Cristiano Ronaldo</cite>
+            </p>
+          </article>
+          <article class="card">
+            <img src="./img/muslera.jpg" alt="Fernando Muslera" />
+            <p>
+              <q
+                >No pensé que un juego de fútbol pudiera atraparme tanto. Es
+                perfecto para competir con amigos.</q
+              >
+              <cite>Fernando Muslera</cite>
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div id="creador">
+        <p>Sitio realizado por Joaquin Pereira (369895)</p>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/joaqu%C3%ADn-pereira-96b086253/"
+          ><i class="fa-brands fa-linkedin fa-2x"></i
+        ></a>
+      </div>
+
+      <div id="redes">
+        <a
+          target="_blank"
+          href="https://www.facebook.com/search/top?q=universidad%20ort%20uruguay"
+          ><i class="fab fa-facebook fa-2x"></i
+        ></a>
+        <a target="_blank" href="https://www.instagram.com/universidadort/"
+          ><i class="fab fa-instagram fa-2x"></i
+        ></a>
+        <a target="_blank" href="https://www.youtube.com/@UniversidadORT"
+          ><i class="fab fa-youtube fa-2x"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- BIBLIOGRAFIA: IMAGENES: wikipedia unsplash.com y chatgpt
+                      fuente: googlefonts
+                      iconos: fontawesome
+                      Nombre de jugadores en la plantilla: chatgpt
+                        -->
+  </body>
+</html>
